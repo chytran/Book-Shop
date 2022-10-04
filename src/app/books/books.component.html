@@ -5,14 +5,9 @@
     <span *ngIf="isShowing">Hide Books</span>
 </button>
 <ul *ngIf="isShowing">
-    <li>
-        {{ name }}
+    <li *ngFor="let book of books">
+        {{ book.name }}
         <br>
-        {{ author }}
-    </li>
-    <li>
-        {{ name }}
-        <br>
-        {{ author }}
+        {{ book.author }}
     </li>
 </ul>

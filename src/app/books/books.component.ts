@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+interface Book {
+  name: string
+  author: string
+}
+
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
@@ -7,8 +12,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooksComponent implements OnInit {
 
-  name: string = "James Bonds";
-  author: string = "Mr. James Bonds";
+  books: Book[] = [
+    {
+      name: "James Bonds",
+      author: "Mr. James Bonds",
+    },
+    {
+      name: "James Bonds",
+      author: "Mr. James Bonds",
+    }
+  ];
+
+  
 
   isShowing: boolean = true;
 
