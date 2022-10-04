@@ -9,11 +9,18 @@ export class BooksComponent implements OnInit {
 
   name: string = "James Bonds";
   author: string = "Mr. James Bonds";
-  isDisabled: boolean = false;
+
+  isShowing: boolean = true;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleBooks() {
+    // if isShowing is true, make it false
+    // vice versa
+    this.isShowing = !this.isShowing;
   }
 
 }

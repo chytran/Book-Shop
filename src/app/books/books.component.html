@@ -1,7 +1,18 @@
 <p>books works!</p>
 
-<button [disabled]="isDisabled">This is Disabled</button>
-
-{{ name }}
-<br>
-{{ author }}
+<button (click)="isShowing = !isShowing">
+    <span *ngIf="!isShowing">Show Books</span>
+    <span *ngIf="isShowing">Hide Books</span>
+</button>
+<ul *ngIf="isShowing">
+    <li>
+        {{ name }}
+        <br>
+        {{ author }}
+    </li>
+    <li>
+        {{ name }}
+        <br>
+        {{ author }}
+    </li>
+</ul>
