@@ -4,6 +4,7 @@
     <span *ngIf="!isShowing">Show Books</span>
     <span *ngIf="isShowing">Hide Books</span>
 </button>
+<!-- If function that displays if true -->
 <ul *ngIf="isShowing">
     <li *ngFor="let book of books">
         {{ book.name }}
